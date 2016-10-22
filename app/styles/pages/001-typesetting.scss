@@ -1,0 +1,71 @@
+// ========================================================
+
+body {
+    font-size: 16px;
+}
+article {
+
+// 1. Choosing the font-size
+
+// Look at the content what it try to say
+// Choose between font-size wisely not to big nor small
+// scaling up or down between 1-8 on inspector and find the balance by zoom in & squint your eyes
+
+h1 {
+    font-size: 56/16 * 1em;
+}
+
+h2 {
+    font-size: 30/16 * 1em;
+}
+
+h3 {
+    font-size: 25/16 * 1em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+// 2. Choosing the measure
+/* If the measure is to short:
+
+    - You feel irritated that the text broke when you built up a comfortable reading speed.
+
+    - Your eyes get tired from bouncing to the left and right rapidly.  */
+
+
+/* If the measure is to long:
+
+    - You had to turn your head while reading the text
+
+    - You lose concentration midway while reading the line  */
+
+// The measure is easy to write in CSS. One character is approximately 0.5em
+// your measure should be between 22.5em (45 characters) and 37.5em (75 characters).
+
+h1 {
+    max-width: 13em;
+}
+
+h2 {
+    max-width: 25em;
+}
+
+h3 {
+    max-width: 30em;
+}
+
+p {
+    max-width: 30em; // Between 22.5 and 37.5em
+}
+
+// 3. Choosing Leading
+// Browsers provide a default leading (of 1.2) that’s usually too small.
+// The ideal leading is anywhere between 1.2 to 1.6 depending on the font-size and measure used.
+
+p {
+    line-height: 1.4;
+}
+
+} // end article

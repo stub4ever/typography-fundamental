@@ -47,7 +47,7 @@ module.exports = {
         srcDirGrunticon  : '<%=config.css.srcDirSass%>/_grunticon',   // <%=config.css.srcDirGrunticon%>
 
         srcDevList : [        // <%=config.css.srcDevList%>
-            '<%=config.css.tempDir%>/{,*/}*.css',
+            '<%=config.css.tempDir%>/*.css',
             '<%=config.css.srcDirSass%>/{,*/}*.css',
             // INSERT custom CSS files  ------------------/
         ],

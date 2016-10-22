@@ -30,6 +30,15 @@ module.exports.tasks = {
                 dest: '<%=config.css.tempDir%>',
                 ext: '.css'
             }]
+        },
+        exercises: {
+            files: [{
+                expand: true,
+                cwd: '<%=config.css.srcDirSass%>/pages',
+                src: ['*.{scss,sass}'],
+                dest: '<%=config.css.tempDir%>/pages',
+                ext: '.css'
+            }]
         }
     },
 };
