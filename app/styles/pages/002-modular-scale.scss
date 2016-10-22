@@ -1,0 +1,33 @@
+// ========================================================
+
+$ms-base: 20px;
+$ms-ratio: 1.5;
+
+// Choosing The Base Number + ratio
+// => http://www.modularscale.com/
+
+body {
+    font-size: $ms-base;
+}
+
+article {
+
+
+h1 {
+    font-size: 67.5px/$ms-base * 1em;
+}
+
+h2 {
+    font-size: 45px/$ms-base * 1em;
+}
+
+h3 {
+    font-size: 30px/$ms-base * 1em;
+}
+
+p {
+    font-size: 20px/$ms-base * 1em;
+}
+
+
+} // end article
