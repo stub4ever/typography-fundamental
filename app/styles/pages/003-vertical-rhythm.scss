@@ -1,0 +1,86 @@
+// ========================================================
+
+$ms-base: 20px;
+$ms-ratio: 1.5;
+
+$base-line-height: $ms-base * $ms-ratio; // 30px;
+
+/*
+Constructing the Vertical Rhythm
+
+There are two rules to creating Vertical Rhythm:
+    1. Set the spaces between each element to a multiple of the baseline
+    2. Set the leading of each text element to a multiple of the baseline
+*/
+
+// The right baseline is the line-height of your body text.
+
+html {
+    font-size: $ms-base;
+    line-height: $ms-ratio;
+}
+
+article {
+
+// Creating the Vertical Rhythm
+
+h1 {
+    font-size: 67.5px/$ms-base * 1em;
+    line-height: $base-line-height * 2; /* 20px * 1.5 * 2 = 60px */
+    margin: $base-line-height 0; /* 20px * 1.5 = 30px */
+    position: relative;
+    top: 23px;
+}
+
+h2 {
+    font-size: 45px/$ms-base * 1em;
+    line-height: $base-line-height * 1.5; /* 20px * 1.5 * 1.5 = 45px */
+    margin: ($base-line-height/1.3333) 0; /* 20px * 1.5 / 1.333 = 22.5 */
+}
+
+h3 {
+    font-size: 30px/$ms-base * 1em;
+    line-height: $base-line-height; /* 20px * 1.5 = 10px */
+    margin: ($base-line-height /2) 0; /* 20px * 1.5 = 5px */
+}
+
+p {
+    font-size: 20px/$ms-base * 1em;
+}
+
+} // end article
+
+
+// Creating the Baseline Grid
+// or use http://basehold.it/
+
+article {
+    background-image: url(http://basehold.it/i/30);
+    /* Shifts baseline grid upwards by 6px*/
+    background-position: 0 -6px;
+
+
+    // The baseline(bottom equal line) + cap height(the height of the first capital letter) = fontsize(highest heightpoint of letter)
+    // => of typgography has to be in the middle of the line-height property.
+
+    /*
+        We need another property to help us calculate the amount of space to push the text to sit on the baseline.
+        This property is the cap height. It’s the height of capital letters (like F) in the typeface.
+    */
+
+    p {
+        font-size: 20px/$ms-base * 1em;
+        line-height: $base-line-height;
+        // position: relative;
+        // top: 5px; // where $x is the half difference between line-height and cap height
+    }
+
+    // or
+
+    // margin-top: 30.8px; // Line height (for Vertical Rhythm)
+    // // padding-top: $x; // Pushing text down
+    // // margin-bottom: -$x; // Undoing the "push"
+
+}
+
+
